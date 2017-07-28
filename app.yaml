@@ -1,0 +1,26 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /js
+  static_dir: website/js
+  
+- url: /img
+  static_dir: website/img
+
+- url: /sass
+  static_dir: website/sass
+  
+- url: /css
+  static_dir: website/css
+  
+- url: /.*
+  script: HozaifaPortfolio.app
+
+libraries:
+- name: jinja2
+  version: latest
+
+# skip_files: 
+# - ^(google-cloud-sdk/.*)
