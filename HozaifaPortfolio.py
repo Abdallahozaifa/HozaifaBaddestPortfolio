@@ -21,4 +21,15 @@ class Handler(webapp2.RequestHandler):
 class MainPage(Handler):
 	def get(self):
 	        self.render("index.html")
+	def post(self):
+	        name = self.request.get('name')
+	        email = self.request.get('email')
+	        message = self.request.get('message')
+	        
+        	mail_message = mail.EmailMessage(sender="abdallahozaifa19527@gmail.com", subject="%s at <%s> emailed you from hozaifaabdalla.com!" % (name, email))
+		mail_message.to = "Hozaifa Abdalla<Abdallahozaifa19527@gmail.com>"
+		mail_message.body = message
+		mail_message.send()
+		self.response.out.write('Success');
+	        print (name, email, message)
 app = webapp2.WSGIApplication([('/', MainPage)])
