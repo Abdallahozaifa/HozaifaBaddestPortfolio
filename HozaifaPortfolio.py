@@ -19,6 +19,6 @@ class Handler(webapp2.RequestHandler):
                 self.write(self.render_str(template, **kw))
 
 class MainPage(Handler):
-		def get(self):
-				   self.render("index.html")
+	def get(self):
+	        self.render("index.html")
 app = webapp2.WSGIApplication([('/', MainPage)])

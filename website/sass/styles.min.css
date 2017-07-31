@@ -3556,8 +3556,8 @@ svg {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    opacity: 0.6
+    /*background-color: #000;*/
+    opacity: 0.6;
 }
 
 .project:hover * {
@@ -4441,3 +4441,46 @@ svg {
     padding: 5px 0;
     padding: .3125rem 0
 }
+
+.project-image {
+    background-size: 100%;
+}
+
+.project-blog {
+    background-size: 150%;
+    background-position-x: 50%;
+}
+
+.project-atm {
+    background-size: 100%;
+    background-position-y: 50%;
+}
+.project-simple{
+    background-size: 150%;
+}
+.project-pebble{
+    background-position-y: 55%;
+    background-size: 100%;
+}
+.project-psd{
+    background-size: 100%;
+    /*background-position-y: 55%;*/
+}
+.project-npeiv{
+    background-size: 100%;
+}
+.project-resume{
+    background-size:150%;
+    background-position: center;
+}
+.project-template{
+    background-size: 150%;
+    background-position-x: 20%; 
+}
+.project-ascii{
+    background-size:100%;
+}
+#contact{
+    width: calc(100% - 200px);
+}
+

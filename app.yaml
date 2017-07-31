@@ -14,12 +14,18 @@ handlers:
   
 - url: /css
   static_dir: website/css
+  
+- url: /includes
+  static_dir: website/includes
 
 - url: /resume
   static_dir: website/resume
 
 - url: /video
   static_dir: website/video
+  
+- url: /html
+  static_dir: website/html  
   
 - url: /.*
   script: HozaifaPortfolio.app
