@@ -10,7 +10,6 @@
         'https://code.jquery.com/jquery-2.0.3.min.js'
       ],
       'easing':         'lib/jquery.easing.min',
-      'typekit':        'lib/typekit',
       'history':        'lib/jquery.history.min',
       'skrollr':        'lib/skrollr.min',
       'imagesLoaded':   'lib/imagesloaded.min',
@@ -77,7 +76,6 @@
   require([
     'menu',
     'transition',
-    'typekit',
     'jquery',
     'easing'
   ],
