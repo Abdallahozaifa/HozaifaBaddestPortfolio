@@ -4480,7 +4480,3 @@ svg {
 .project-ascii{
     background-size:100%;
 }
-#contact{
-    width: calc(100% - 200px);
-}
-
