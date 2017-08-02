@@ -8,13 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
   <meta name="author" content="Hozaifa Abdalla">
   <link rel="stylesheet" href="/sass/styles.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script data-main="js/main" src="/js/require.js"></script>
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.bootcss.com/hover.css/2.1.1/css/hover-min.css" type="text/css" />
 </head>
 
 <body>
-  <div class="menu">
+  <div class="menu" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
     <div class="menu__content">
       <a class="menu__link" href="#about">
         <h3 class="menu__title">About</h3>
@@ -84,7 +88,7 @@
 
       <div id="content" data-start="modules/index">
         <!-- About Begin -->
-        <section id="about" class="section section--about">
+        <section id="about" class="section section--about" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
           <div class="container-fluid">
             <div class="row">
               <div class="col-xs-12 col-md-11 col-md-centered col-lg-10 col-lg-push-1">
@@ -140,7 +144,7 @@
         <!-- About End -->
 
         <!-- Work Begin -->
-        <section id="work" class="section section--work">
+        <section id="work" class="section section--work" data-aos="fade-left" data-aos-anchor="#content" data-aos-offset="500" data-aos-duration="1000">
           <div class="container-fluid">
             <div class="row">
               <div class="col-xs-12 col-md-11 col-md-centered col-lg-10 col-lg-push-1">
@@ -151,9 +155,9 @@
                   </h6>
                 </div>
 
-                <div class="section__row row row-thin">
-                  <div class="col-xs-12 col-sm-8">
-                    <a target="_blank" href="http://hozaifa-abdalla.appspot.com/" class="project project--these-beats-are-dope project-image" style="background-image: url('/img/project-images/portfolio.png');">
+                <div class="section__row row row-thin" >
+                  <div class="col-xs-12 col-sm-8" >
+                    <a target="_blank" href="http://hozaifa-abdalla.appspot.com/" class="project project--these-beats-are-dope project-image " style="background-image: url('/img/project-images/portfolio.png');">
                       <span class="project__background"></span>
 
                       <div class="project__description">
@@ -172,7 +176,7 @@
                     </a>
                   </div>
 
-                  <div class="col-xs-12 col-sm-4">
+                  <div class="col-xs-12 col-sm-4" >
                     <a target="_blank" href="https://penn-state-blog.appspot.com/" class="project project-image project-blog" style="background-image: url('/img/project-images/blog.png');">
                       <span class="project__background"></span>
 
@@ -194,7 +198,7 @@
                 </div>
 
                 <div class="section__row row row-thin">
-                  <div class="col-xs-12 col-sm-4">
+                  <div class="col-xs-12 col-sm-4" >
                     <a target="_blank" href="https://attendia.herokuapp.com" class="project project--this-is-neat project-image project-attendia" style="background-image: url(/img/project-images/attendia.png);">
                       <span class="project__background"></span>
 
@@ -214,7 +218,7 @@
                     </a>
                   </div>
 
-                  <div class="col-xs-12 col-sm-8">
+                  <div class="col-xs-12 col-sm-8" >
                     <a target="_blank" href="http://onwardstate.com/2016/03/22/penn-state-student-makes-ratemyprofessors-chrome-extension-compatible-with-lionpath/" class="project project--web-directions project-image project-extension" style="background-image: url(/img/project-images/extension.png);">
                       <span class="project__background"></span>
 
@@ -256,7 +260,7 @@
                     </a>
                   </div>
 
-                  <div class="col-xs-12 col-sm-4">
+                  <div class="col-xs-12 col-sm-4" >
                     <a target="_blank" href="https://super-simple.herokuapp.com/" class="project project--business-events-sydney project-simple" style="background-image: url('/img/project-images/simple.png');">
                       <span class="project__background"></span>
 
@@ -320,7 +324,7 @@
                 </div>
 
                 <div class="section__row row row-thin">
-                  <div class="col-xs-12 col-sm-8">
+                  <div class="col-xs-12 col-sm-8" >
                     <a target="_blank" href="http://atterholtfordistrictjudge.org/" class="project project--smashing-magazine project-image" style="background-image: url('/img/project-images/atterholt.png');">
                       <span class="project__background"></span>
 
@@ -340,7 +344,7 @@
                     </a>
                   </div>
 
-                  <div class="col-xs-12 col-sm-4">
+                  <div class="col-xs-12 col-sm-4" >
                     <a target="_blank" href="https://atm-hackpsu.herokuapp.com/" class="project project--business-events-sydney project-atm" style="background-image: url('/img/project-images/atm.png');">
                       <span class="project__background"></span>
 
@@ -362,7 +366,7 @@
                 </div>
 
                 <div class="section__row row row-thin">
-                  <div class="col-xs-12 col-sm-4">
+                  <div class="col-xs-12 col-sm-4" >
                     <a target="_blank" href="https://devpost.com/software/pebble-activity-app-pact" class="project project--this-is-neat project-pebble" style="background-image: url(/img/project-images/pebble.png);">
                       <span class="project__background"></span>
 
@@ -382,7 +386,7 @@
                     </a>
                   </div>
 
-                  <div class="col-xs-12 col-sm-8">
+                  <div class="col-xs-12 col-sm-8" >
                     <a target="_blank" href="https://www.npmjs.com/package/psd-api" class="project project--web-directions project-psd" style="background-image: url(/img/project-images/psd.png);">
                       <span class="project__background"></span>
 
@@ -404,7 +408,7 @@
                 </div>
 
                 <div class="section__row row row-thin">
-                  <div class="col-xs-12 col-sm-8">
+                  <div class="col-xs-12 col-sm-8" >
                     <a target="_blank" href="https://github.com/Abdallahozaifa/NPEIV" class="project project--smashing-magazine project-npeiv" style="background-image: url('/img/project-images/NPEIV.png');">
                       <span class="project__background"></span>
 
@@ -424,7 +428,7 @@
                     </a>
                   </div>
 
-                  <div class="col-xs-12 col-sm-4">
+                  <div class="col-xs-12 col-sm-4" >
                     <a target="_blank" href="http://resume.hozaifaabdalla.com/" class="project project--business-events-sydney project-resume" style="background-image: url('/img/project-images/resume.png');">
                       <span class="project__background"></span>
 
@@ -446,7 +450,7 @@
                 </div>
 
                 <div class="section__row row row-thin">
-                  <div class="col-xs-12 col-sm-4">
+                  <div class="col-xs-12 col-sm-4" >
                     <a target="_blank" href="http://template.hozaifaabdalla.com" class="project project--this-is-neat project-template" style="background-image: url(/img/project-images/template.png);">
                       <span class="project__background"></span>
 
@@ -466,7 +470,7 @@
                     </a>
                   </div>
 
-                  <div class="col-xs-12 col-sm-8">
+                  <div class="col-xs-12 col-sm-8" >
                     <a target="_blank" href="http://ascii.hozaifaabdalla.com" class="project project--web-directions project-ascii" style="background-image: url(/img/project-images/ascii.png);">
                       <span class="project__background"></span>
 
@@ -570,7 +574,6 @@
   <div class="menu__wrapper--clone"></div>
 
 </body>
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>-->
 <script type="text/javascript" src="/js/portfolio.js"></script>
 
 </html>

@@ -1,4 +1,4 @@
-(function () {
+(function() {
   'use strict';
 
   require.config({
@@ -9,21 +9,21 @@
         'lib/jquery.min',
         'https://code.jquery.com/jquery-2.0.3.min.js'
       ],
-      'easing':         'lib/jquery.easing.min',
-      'history':        'lib/jquery.history.min',
-      'skrollr':        'lib/skrollr.min',
-      'imagesLoaded':   'lib/imagesloaded.min',
-      'twitter':        'https://platform.twitter.com/widgets',
-      'transition':     'modules/transition',
-      'menu':           'modules/menu',
+      'easing': 'lib/jquery.easing.min',
+      'history': 'lib/jquery.history.min',
+      'skrollr': 'lib/skrollr.min',
+      'imagesLoaded': 'lib/imagesloaded.min',
+      'twitter': 'https://platform.twitter.com/widgets',
+      'transition': 'modules/transition',
+      'menu': 'modules/menu',
 
       // Modules
-      'hello':          'modules/hello',
-      'contact':        'modules/contact',
-      'bigheadmode':    'modules/bigheadmode',
-      'foodsters':      'modules/foodsters',
-      'keno':           'modules/keno',
-      'webdirections':  'modules/webdirections',
+      'hello': 'modules/hello',
+      'contact': 'modules/contact',
+      'bigheadmode': 'modules/bigheadmode',
+      'foodsters': 'modules/foodsters',
+      'keno': 'modules/keno',
+      'webdirections': 'modules/webdirections',
     },
 
     shim: {
@@ -74,28 +74,28 @@
   });
 
   require([
-    'menu',
-    'transition',
-    'jquery',
-    'easing'
-  ],
+      'menu',
+      'transition',
+      'jquery',
+      'easing'
+    ],
 
-  function (menu, transition) {
-    // Global modules
-    menu.init();
+    function(menu, transition) {
+      // Global modules
+      menu.init();
 
-    // Page specific module
-    var nextModule = $('#content').attr('data-start');
+      // Page specific module
+      var nextModule = $('#content').attr('data-start');
 
-    if (nextModule) {
-      require([nextModule], function (nextModule) {
-        nextModule.init();
-        transition.init(nextModule);
-      });
-    }
+      if (nextModule) {
+        require([nextModule], function(nextModule) {
+          nextModule.init();
+          transition.init(nextModule);
+        });
+      }
 
-    else {
-      transition.init(false);
-    }
-  })
+      else {
+        transition.init(false);
+      }
+    })
 }());

@@ -5,7 +5,6 @@ define([], function () {
     var loadedModules;
 
     var init = function() {
-      console.log('index');
       loadedModules = [];
 
       require([
