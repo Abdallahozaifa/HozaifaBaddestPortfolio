@@ -3106,10 +3106,10 @@ svg {
     }
 }
 
-.menu__link:hover {
-    color: #71F7FE;
-    text-decoration: none
-}
+/*.menu__link:hover {*/
+/*    color: #71F7FE;*/
+/*    text-decoration: none*/
+/*}*/
 
 .menu__link:hover .menu__title {
     color: #000;
@@ -3120,9 +3120,17 @@ svg {
     color: #000;
 }
 
+.menu__link:hover .menu__subtitle {
+    color: #000;
+    text-shadow: 4px 3px 3px rgba(113, 247, 254, 1);
+}
+
 .menu__link:hover .menu__icon polygon,
 .menu__link:hover .menu__icon path {
     fill: rgba(113, 247, 254, 1);
+}
+.menu__link:hover .menu__icon path {
+    stroke: rgba(113, 247, 254, 1);
 }
 
 .menu__link--alt {
