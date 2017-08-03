@@ -4513,4 +4513,7 @@ svg {
     color: #000;
     text-shadow: 4px 4px 4px rgba(113, 247, 254, 1);
 }
+.menu__subtitle:hover{
+    color: #000;
+}
 
