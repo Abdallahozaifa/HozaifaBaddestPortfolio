@@ -75,4 +75,53 @@ $(document).ready(function() {
     });
 
     AOS.init();
+
+    /**
+     * Function that preloads the images into the cache when the page loads.
+     * @function
+     * @param {array} array - The array of images to be preloaded on the page.
+     * @module atm js
+     */
+    var preloadImages = function(array) {
+        if (!preloadImages.list) {
+            preloadImages.list = [];
+        }
+        var list = preloadImages.list;
+        for (var i = 0; i < array.length; i++) {
+            var img = new Image();
+            img.onload = function() {
+                var index = list.indexOf(this);
+                if (index !== -1) {
+                    // remove image from the array once it's loaded
+                    // for memory consumption reasons
+                    list.splice(index, 1);
+                }
+            };
+            list.push(img);
+            img.src = array[i];
+        }
+    };
+
+    preloadImages([
+        "/img/project-images/ascii.png",
+        "/img/project-images/atm.png",
+        "/img/project-images/attendia.png",
+        "/img/project-images/atterholt.png",
+        "/img/project-images/blog.png",
+        "/img/project-images/bugz.png",
+        "/img/project-images/extension.png",
+        "/img/project-images/mss.png",
+        "/img/project-images/NPEIV.png",
+        "/img/project-images/pebble.png",
+        "/img/project-images/portfolio.png",
+        "/img/project-images/psd.png",
+        "/img/project-images/pulsepay.png",
+        "/img/project-images/resume.png",
+        "/img/project-images/simple.png",
+        "/img/project-images/slidemaster.png",
+        "/img/project-images/template.png"
+    ]);
+    
+
+    
 });

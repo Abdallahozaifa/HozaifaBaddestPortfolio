@@ -4,7 +4,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 html {
@@ -392,12 +391,12 @@ blockquote {
 
 a {
     color: #C33;
-    text-decoration: none
+    text-decoration: none;
 }
 
 a:focus,
 a:hover {
-    color: #b82e2e;
+    color: #3b5998;
     text-decoration: underline
 }
 
@@ -2856,7 +2855,7 @@ a .h5,
 a h6,
 a .h6 {
     display: inline-block;
-    color: #C33
+    /*color: #C33*/
 }
 
 a:active,
@@ -2990,13 +2989,13 @@ svg {
 
 .form__input:focus,
 .form__textarea:focus {
-    border: 1px solid #C33;
+    border: 1px solid rgba(113, 247, 254, 1);
     outline: none
 }
 
 .form__input:focus+.form__label,
 .form__textarea:focus+.form__label {
-    background-color: #C33
+    background-color: rgba(113, 247, 254, 1)
 }
 
 .form__input {
@@ -3022,7 +3021,8 @@ svg {
 }
 
 .form__submit:hover {
-    background-color: #C33
+    background-color: #71F7FE;
+    color: #000;
 }
 
 .form__error {
@@ -3036,7 +3036,7 @@ svg {
     left: 0;
     height: 3px;
     z-index: 9999;
-    background-color: #C33;
+    background-color: #71F7FE;
     transition: 250ms width cubic-bezier(0.86, 0, 0.07, 1), 250ms height cubic-bezier(0.86, 0, 0.07, 1)
 }
 
@@ -3107,21 +3107,24 @@ svg {
 }
 
 .menu__link:hover {
-    color: #C33;
+    color: #71F7FE;
     text-decoration: none
 }
 
 .menu__link:hover .menu__title {
-    color: #C33
+    color: #000;
+    text-shadow: 4px 4px 4px rgba(113, 247, 254, 1);
+    stroke: rgba(113, 247, 254, 1);
 }
 
 .menu__link:hover .menu__icon line {
-    stroke: #C33
+    color: #000;
+    stroke: rgba(113, 247, 254, 1);
 }
 
 .menu__link:hover .menu__icon polygon,
 .menu__link:hover .menu__icon path {
-    fill: #C33
+    /*fill: rgba(113, 247, 254, 1);*/
 }
 
 .menu__link--alt {
@@ -3136,7 +3139,7 @@ svg {
 
 .menu__link--alt .menu__title,
 .menu__link--alt .menu__subtitle {
-    color: #C33
+    color: #000;
 }
 
 .menu__link--alt .menu__title {
@@ -3145,12 +3148,14 @@ svg {
 }
 
 .menu__link--alt:hover .menu__icon line {
-    stroke: #C33
+    stroke: rgba(113, 247, 254, 1);
 }
 
 .menu__link--alt:hover .menu__icon polygon,
 .menu__link--alt:hover .menu__icon path {
-    fill: #C33
+    fill: rgba(113, 247, 254, 1);
+    /*color: #000;*/
+    /*text-shadow: 4px 4px 4px rgba(113, 247, 254, 1);*/
 }
 
 .menu__title,
@@ -3561,7 +3566,7 @@ svg {
 }
 
 .project:hover * {
-    color: #fff
+    color: #000;
 }
 
 @media (min-width: 544px) {
@@ -3585,7 +3590,8 @@ svg {
     display: block;
     height: 100%;
     width: 100%;
-    background-color: #C33;
+    background-color: rgba(113, 247, 254, 1);
+    color: #000;
     transform: translateX(100%) translateX(350px);
     transition: 500ms transform ease-in-out 100ms
 }
@@ -3597,7 +3603,7 @@ svg {
     height: 0px;
     border-style: solid;
     border-width: 0 350px 350px 0;
-    border-color: transparent #C33 transparent transparent;
+    border-color: transparent rgba(113, 247, 254, 1) transparent transparent;
     transform: translateX(-100%) translateY(-50px)
 }
 
@@ -4455,28 +4461,45 @@ svg {
     background-size: 100%;
     background-position-y: 50%;
 }
-.project-simple{
+
+.project-simple {
     background-size: 150%;
 }
-.project-pebble{
+
+.project-pebble {
     background-position-y: 55%;
     background-size: 100%;
 }
-.project-psd{
+
+.project-psd {
     background-size: 100%;
     /*background-position-y: 55%;*/
 }
-.project-npeiv{
+
+.project-npeiv {
     background-size: 100%;
 }
-.project-resume{
-    background-size:150%;
+
+.project-resume {
+    background-size: 150%;
     background-position: center;
 }
-.project-template{
+
+.project-template {
     background-size: 150%;
-    background-position-x: 20%; 
+    background-position-x: 20%;
 }
-.project-ascii{
-    background-size:100%;
+
+.project-ascii {
+    background-size: 100%;
+}
+
+.menu__link:hover {
+    color: #000;
+    text-shadow: rgba(113, 247, 254, 1);
+}
+
+.heading__title {
+    color: #000;
+    text-shadow: 4px 4px 4px rgba(113, 247, 254, 1);
 }
