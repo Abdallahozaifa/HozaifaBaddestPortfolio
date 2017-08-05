@@ -3,8 +3,7 @@ define([], function () {
   
   var contact = (function() {
     var init = function() {
-      console.log('contact');
-      
+
       var formSubmitted = false;
       var $form = $('#contact-form');
       var $formError = $form.find('.form__error');

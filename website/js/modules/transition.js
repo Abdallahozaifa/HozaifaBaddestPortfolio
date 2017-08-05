@@ -5,7 +5,6 @@ define([], function () {
     var transitioning, currentModule, localPush, $body, $window, $document, $wrapper, $wrapperClone, $clone, $preloader, $cover;
 
     var init = function(module) {
-      console.log('transition');
       
       currentModule = module;
       transitioning = false;

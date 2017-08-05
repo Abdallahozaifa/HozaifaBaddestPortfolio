@@ -1,6 +1,5 @@
 /* global $, swal*/
 $(document).ready(function() {
-    console.log("portfolio.js!");
 
     var form = {};
     form.name = $("#name");
@@ -12,6 +11,11 @@ $(document).ready(function() {
         form.name.val('');
         form.email.val('');
         form.message.val('');
+    };
+
+    var is_email = function(email) {
+        var emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailReg.test(email);
     };
 
     submitBtn.click(function(e) {
@@ -26,33 +30,42 @@ $(document).ready(function() {
             "message": message
         };
 
-        console.log(name + " " + email + " " + message + " ");
         if (name != "" && email != "" && message != "") {
-            /* Send contact info to the server through a post request */
-            $.ajax({
-                url: "/",
-                method: "POST",
-                type: 'json',
-                data: emailData,
-                crossDomain: true
-            }).done(function(data) {
-                clearForm();
-                if (data == "Success") {
-                    swal({
-                        title: 'Thank you for contacting me!',
-                        text: 'I will respond in a timely manner!',
-                        type: 'success',
-                        timer: 3000,
-                    });
-                }
-                else {
-                    swal(
-                        'Problem with the server!',
-                        'Please try again!',
-                        'error'
-                    );
-                }
-            });
+            var emailTest = is_email(email);
+            if (emailTest == true) {
+                /* Send contact info to the server through a post request */
+                $.ajax({
+                    url: "/",
+                    method: "POST",
+                    type: 'json',
+                    data: emailData,
+                    crossDomain: true
+                }).done(function(data) {
+                    clearForm();
+                    if (data == "Success") {
+                        swal({
+                            title: 'Thank you for contacting me!',
+                            text: 'I will respond in a timely manner!',
+                            type: 'success',
+                            timer: 3000,
+                        });
+                    }
+                    else {
+                        swal(
+                            'Problem with the server!',
+                            'Please try again!',
+                            'error'
+                        );
+                    }
+                });
+            }
+            else {
+                swal(
+                    'OOPS',
+                    'Please enter a valid email!',
+                    'error'
+                );
+            }
         }
         else {
             swal(
@@ -121,7 +134,30 @@ $(document).ready(function() {
         "/img/project-images/slidemaster.png",
         "/img/project-images/template.png"
     ]);
-    
 
-    
+    var sections = {};
+    sections.menu = $("#menu-portion");
+    sections.about = $("#about");
+    sections.work = $("#work");
+    sections.contact = $("#contact");
+
+    var handleSections = function(callback) {
+        Object.keys(sections).forEach(function(section) {
+            var elm = sections[section];
+            callback(elm);
+        });
+    };
+
+    handleSections(function(elm) {
+        elm.hide();
+    });
+
+    setTimeout(function() {
+        $('body').addClass('loaded');
+        setTimeout(function() {
+            handleSections(function(elm) {
+                elm.show(1500);
+            });
+        }, 1000);
+    }, 3000);
 });

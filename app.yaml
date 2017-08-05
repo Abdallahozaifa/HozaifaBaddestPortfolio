@@ -21,11 +21,11 @@ handlers:
 - url: /resume
   static_dir: website/resume
 
+- url: /html
+  static_dir: website/html
+
 - url: /video
   static_dir: website/video
-  
-- url: /html
-  static_dir: website/html  
   
 - url: /.*
   script: HozaifaPortfolio.app
@@ -36,3 +36,6 @@ libraries:
 
 # skip_files: 
 # - ^(google-cloud-sdk/.*)
+# - ^(.git/.*)
+# - ^(.c9/.*)
+# - ^(website/video/.*)

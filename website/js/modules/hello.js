@@ -5,7 +5,6 @@ define([], function () {
     var skroll;
 
     var init = function () {
-      console.log('hello');
 
       require([
         'skrollr'

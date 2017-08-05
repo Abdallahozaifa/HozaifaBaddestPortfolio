@@ -19,7 +19,25 @@
 </head>
 
 <body>
-  <div class="menu" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+    <!--<link rel="stylesheet" href="/sass/normalize.css">-->
+  <link rel="stylesheet" href="/sass/main.css">
+  <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+  </script>
+  <script src="/js/main2.js"></script>
+  
+  
+  <div class="menu" id="menu-portion">
     <div class="menu__content">
       <a class="menu__link" href="#about">
         <h3 class="menu__title">About</h3>
@@ -78,10 +96,8 @@
     <div id="skrollr-body">
       <div class="hello" data-0="height: 700px; transform: translateY(0px);" data-700="height: 0px; transform: translateY(100px)">
         <video id="hello__video" class="hello__video hozaifa_vid" autoplay preload loop width="0" muted>
-            <!--<source src="/video/hozaifa-welcome.MP4" type="video/mp4">-->
-            <!--<source src="video/hello.webm" type="video/webm">-->
+            <source src="/video/front.mp4" type="video/mp4">
         </video>
-        <img id="hello__video" class="hello__video" src="/img/fountain.png"></img>
       </div>
       <a href="" class="menu__toggle">
         <span></span>
@@ -522,7 +538,7 @@
 
                   <div class="col-xs-12 col-sm-7 col-md-8">
                     <form>
-                      <input type="text" name="foo" style="display: none;">
+                      <input type="text" name="foo" style="display: none;" required>
 
                       <div class="form__control">
                         <input class="form__input" type="text" id="name" name="name" placeholder="Your name">
@@ -533,7 +549,7 @@
                       </div>
 
                       <div class="form__control">
-                        <input class="form__input" type="text" id="email" name="email" placeholder="Your email">
+                        <input class="form__input" type="text" id="email" name="email" placeholder="Your email" required>
 
                         <label class="form__label" for="email">
                         <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="#FFF"><path d="M10.267 12.27c-.093.094-.22.145-.352.145s-.26-.055-.355-.145L3.048 5.755C3.028 5.835 3 5.912 3 6v8c0 .552.447 1 1 1h12c.554 0 1-.447 1-1V6c0-.138-.023-.27-.076-.387l-6.657 6.657z"/><path d="M9.915 11.208l6.187-6.188c-.038-.003-.065-.02-.1-.02H4c-.086 0-.164.03-.245.048l6.16 6.16z"/></g></svg>
@@ -541,7 +557,7 @@
                       </div>
 
                       <div class="form__control">
-                        <textarea class="form__textarea" id="message" name="message" placeholder="Your message"></textarea>
+                        <textarea class="form__textarea" id="message" name="message" placeholder="Your message" required></textarea>
 
                         <label class="form__label" for="message">
                         <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="#FFF"><path d="M2.99 17l4.18-1.124-3.06-3.057M15.043 8.02l-7.497 7.498-3.073-3.072 7.497-7.5zM15.653 3.46c-.61-.613-1.57-.613-2.182 0L12.33 4.6l3.08 3.08 1.143-1.142c.61-.61.61-1.57 0-2.182l-.897-.897z"/></g></svg>
