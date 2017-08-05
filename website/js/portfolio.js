@@ -140,6 +140,7 @@ $(document).ready(function() {
     sections.about = $("#about");
     sections.work = $("#work");
     sections.contact = $("#contact");
+    var entryHeader = $(".entry-header");
 
     var handleSections = function(callback) {
         Object.keys(sections).forEach(function(section) {
@@ -154,8 +155,11 @@ $(document).ready(function() {
 
     setTimeout(function() {
         $('body').addClass('loaded');
+        entryHeader.remove();
         setTimeout(function() {
+            
             handleSections(function(elm) {
+                
                 elm.show(1500);
             });
         }, 1000);

@@ -3826,7 +3826,7 @@ svg {
 
 @media (min-width: 768px) {
     .hello__video {
-        transform: translateX(-50%) translateX(88px) translateY(-125px)
+        /*transform: translateX(-50%) translateX(88px) translateY(-125px);*/
     }
 }
 
