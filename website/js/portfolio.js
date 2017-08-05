@@ -166,4 +166,11 @@ $(document).ready(function() {
             });
         }, 1000);
     }, 3000);
+    
+    var vid = document.getElementById("hello__video");
+    vid.addEventListener("timeupdate", function () {
+        if(this.currentTime >= 10.0) {
+            this.currentTime = 5.0;
+        }
+    });
 });
