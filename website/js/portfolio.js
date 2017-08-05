@@ -140,7 +140,9 @@ $(document).ready(function() {
     sections.about = $("#about");
     sections.work = $("#work");
     sections.contact = $("#contact");
+    // sections.menuWrapper = $(".menu__wrapper");
     var entryHeader = $(".entry-header");
+    
 
     var handleSections = function(callback) {
         Object.keys(sections).forEach(function(section) {
