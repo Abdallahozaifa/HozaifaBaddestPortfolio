@@ -142,7 +142,7 @@ $(document).ready(function() {
     sections.contact = $("#contact");
     // sections.menuWrapper = $(".menu__wrapper");
     var entryHeader = $(".entry-header");
-    
+
 
     var handleSections = function(callback) {
         Object.keys(sections).forEach(function(section) {
@@ -159,18 +159,22 @@ $(document).ready(function() {
         $('body').addClass('loaded');
         entryHeader.remove();
         setTimeout(function() {
-            
+            console.log("Preloader done!");
+            var vid = $("#hello__video");
+            vid.trigger('play');
+            //update HTML5 video current play time
+            // vid.on('timeupdate', function() {
+            //     var currentPos = vid[0].currentTime; //Get currenttime
+            //     var maxduration = vid[0].duration; //Get video duration
+            //     // console.log(maxduration);
+            //     // if(currentPos > 10){
+            //     //     vid[0].currentTime = 5;
+            //     // }
+            //     console.log(currentPos);
+            // });
             handleSections(function(elm) {
-                
                 elm.show(1500);
             });
         }, 1000);
     }, 3000);
-    
-    var vid = document.getElementById("hello__video");
-    vid.addEventListener("timeupdate", function () {
-        if(this.currentTime >= 10.0) {
-            this.currentTime = 5.0;
-        }
-    });
 });
